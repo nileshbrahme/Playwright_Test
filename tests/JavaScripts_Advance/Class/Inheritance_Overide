@@ -1,0 +1,16 @@
+// Create a Vehicle class with a method move() that logs "Vehicle is moving".
+// Create a Airplane class that extends Vehicle and overrides the move() method to log "Airplane is flying"
+
+class Vehicle {
+    move() {
+        console.log("Vehicle is moving");
+    }
+}
+
+class Airplane extends Vehicle {
+    move() {
+        console.log("Airplane is flying");
+    }
+}
+
+    

@@ -1,0 +1,6 @@
+{
+    "name": "test-repo-1234",
+  "description": "A New test repository",
+  "private": false,
+  "auto_init": true
+}
