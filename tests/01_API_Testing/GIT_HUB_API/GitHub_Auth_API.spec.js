@@ -13,6 +13,7 @@ test.describe('Authentication Test Cases', () => {
                 'Accept': 'application/vnd.github.v3+json'
             }
         });
+
         expect(response.status()).toBe(200);
         const responseBody = await response.json();
         expect(responseBody).toHaveProperty('login', 'nileshbrahme');
@@ -21,7 +22,7 @@ test.describe('Authentication Test Cases', () => {
     });
 });
 
-test.skip('Authentication Negative Scenarios',  async ({ request }) => {
+test.skip('Authentication Invalid Token',  async ({ request }) => {
     const GITHUB_BASE_URL = process.env.GITHub_Base_Url;
     const invalidToken = process.env.Invalid_GITHUB_Token;
 
@@ -49,6 +50,9 @@ test('Authentication Invalid URL',  async ({ request }) => {
         }
     });
     expect(response.status()).toBe(404);
+
+
+    
 });
 
 
