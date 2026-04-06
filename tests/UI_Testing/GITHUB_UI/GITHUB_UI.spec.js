@@ -5,7 +5,6 @@ test.describe('GitHub UI Tests', () => {
     test('Navigate to GitHub homepage', async ({ page }) => {
         await page.goto('https://github.com');
 
-
         // Validate page title
         await expect(page).toHaveTitle('GitHub · Change is constant. GitHub keeps you ahead. · GitHub');
     }   
@@ -13,7 +12,7 @@ test.describe('GitHub UI Tests', () => {
     test('Search for a repository', async ({ page }) => {
         await page.goto('https://github.com');
         // Enter search query and submit    
-        await page.fill('input[name="q"]', 'playwright');   
+        await page.fill('input[name="q"]', 'playwright');
         await page.press('input[name="q"]', 'Enter');
         // Validate search results page
         await expect(page).toHaveURL(/search\?q=playwright/);
@@ -59,7 +58,7 @@ test.describe('GitHub UI Tests', () => {
         // Validate actions page is displayed
         await expect(page).toHaveURL(/actions/);
     }
-    );  
+    );
     test('Check repository projects tab', async ({ page }) => {
         await page.goto('https://github.com/microsoft/playwright');
         // Click on the "Projects" tab
